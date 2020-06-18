@@ -9,20 +9,16 @@ import com.VladProject.Models.AccountType;
 public class TestAccountDAOImpl {
 
 	public static void main(String[] args) {
-		//getAllAccounts();
-		//getAccountByAccountId();
-		//getAllAccountsByStatus();
-		getAllAccountsByUser();
-		//createAccount();
-		//updateAccount();
-		//getAllAccounts();
-		//withdrawAccount();
-		//getAllAccounts();		
-		//depositAccount();
-		//getAllAccounts();
-		//transferBetweenAccounts();
-		//getAllAccounts();
-		//passTimeAccount();
+		getAllAccounts();
+		
+		updateAccount();
+		
+		withdrawAccount();
+		getAllAccounts();		
+		depositAccount();
+		getAllAccounts();
+		transferBetweenAccounts();
+		getAllAccounts();
 	}
 
 	public static void getAllAccounts() {

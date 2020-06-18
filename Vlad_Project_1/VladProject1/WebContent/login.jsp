@@ -30,7 +30,7 @@
 			<div>
 				<label for="password">Password</label>
 				<div>
-					<input type="text" type="password" id="password" name="password"
+					<input type="password" id="password" name="password"
 						placeholder="Password" required="required"
 						value="${param.password }" />
 				</div>
