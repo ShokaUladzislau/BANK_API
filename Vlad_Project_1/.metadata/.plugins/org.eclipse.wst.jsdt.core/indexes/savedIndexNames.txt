@@ -1,0 +1,4 @@
+INDEX VERSION 1.4+/Users/uladzislaushoka/Programming/revature/Vlad_Project_1/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2507944798.index
+1968026256.index
+2476635045.index

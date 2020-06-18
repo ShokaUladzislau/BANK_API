@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.awt.Window.Type"/>
+    <fullyQualifiedTypeName name="javax.management.relation.Role"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="com.VladProject.dao.RoleDAO"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
+    <fullyQualifiedTypeName name="com.VladProject.dao.AccountDAO"/>
+    <fullyQualifiedTypeName name="com.VladProject.dao.AccountDAOImpl"/>
+    <fullyQualifiedTypeName name="com.VladProject.Models.Account"/>
+    <fullyQualifiedTypeName name="com.VladProject.Models.Role"/>
+    <fullyQualifiedTypeName name="com.VladProject.Models.AccountStatus"/>
+    <fullyQualifiedTypeName name="com.VladProject.Models.AccountType"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="com.VladProject.Utilites.TestConnect"/>
+    <fullyQualifiedTypeName name="com.VladProject.Utilites.DAOUtilities"/>
+    <fullyQualifiedTypeName name="com.VladProject.dao.UserDAO"/>
+    <fullyQualifiedTypeName name="com.VladProject.dao.UserDAOImpl"/>
+    <fullyQualifiedTypeName name="com.VladProject.Models.User"/>
+</qualifiedTypeNameHistroy>
