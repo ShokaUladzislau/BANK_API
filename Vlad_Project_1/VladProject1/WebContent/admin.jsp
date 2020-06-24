@@ -17,22 +17,22 @@
 		<h1>
 			Bank API<small> Admin page </small>
 		</h1>
-		
+
 		<hr>
-		
-		<form>
-			<input type="button" value="Add user"
-				onclick="window.location.href='AddUser'" />
-		</form>
-		
-		<hr>
-		
+
 		<form>
 			<input type="button" value="Logout"
 				onclick="window.location.href='Logout'" />
 		</form>
 
+
 		<hr>
+
+		<form>
+			<input type="button" value="Add user"
+				onclick="window.location.href='AddUser'" />
+		</form>
+
 		<table
 			style="text-align: center; width: 100%; border: 1px solid black;">
 			<caption>
@@ -70,6 +70,54 @@
 				</c:forEach>
 			</tbody>
 		</table>
+		
+		<hr>
+
+		<div>
+		
+		<form>
+			<input type="button" value="Add account"
+				onclick="window.location.href='AddAccount'" />
+		</form>
+		
+			<table
+				style="text-align: center; width: 100%; border: 1px solid black;">
+				<caption>
+					<b>Accounts:</b>
+				</caption>
+				<thead>
+					<tr>
+						<td>Account ID:</td>
+						<td>Balance:</td>
+						<td>Status:</td>
+						<td>Type:</td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="account" items="${accounts}">
+
+						<tr>
+							<td><c:out value="${account.accountId}" /></td>
+							<td><c:out value="${account.balance}" /></td>
+							<td><c:out value="${account.status.status}" /></td>
+							<td><c:out value="${account.type.type}" /></td>
+							<td><form
+									action="AdminViewAccountDetails?accountId=${account.accountId}"
+									method="get">
+									<input type="hidden" name="accountId"
+										value="${account.accountId}">
+									<button>Details</button>
+								</form></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
+		<hr>
+
+
+
 	</div>
 
 </body>

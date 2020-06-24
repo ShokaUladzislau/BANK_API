@@ -12,8 +12,8 @@ import com.VladProject.Models.Account;
 import com.VladProject.Utilites.DAOUtilities;
 import com.VladProject.dao.AccountDAO;
 
-@WebServlet("/UpdateAccount")
-public class UpdateAccountServlet extends HttpServlet {
+@WebServlet("/DepositAccount")
+public class DepositAccountServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -25,9 +25,8 @@ public class UpdateAccountServlet extends HttpServlet {
 
 		if (account != null) {
 
-			account = adao.updateAccount(Integer.parseInt(request.getParameter("accountId")),
-					Double.parseDouble(request.getParameter("balance")),
-					Integer.parseInt(request.getParameter("statusId")), Integer.parseInt(request.getParameter("typeId")));
+			account = adao.depositAccount(Integer.parseInt(request.getParameter("accountId")),
+					Double.parseDouble(request.getParameter("deposit")));
 
 			request.setAttribute("account", account);
 

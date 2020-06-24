@@ -99,6 +99,36 @@ public class AccountDAOImpl implements AccountDAO {
 	}
 
 	/*------------------------------------------------------------------------------------------------*/
+	
+	@Override
+	public boolean addAccount(Account account) {
+		try {
+			connection = DAOUtilities.getConnection();
+			String sql = "insert into vpdb_accounts\n" + 
+					"(accountid, balance, status, type)\n" + 
+					"VALUES (?,?,?,?)"; 
+			stmt = connection.prepareStatement(sql);
+			
+			stmt.setInt(1, account.getAccountId());
+			stmt.setDouble(2, account.getBalance());
+			stmt.setInt(3, account.getStatus().getStatusId());
+			stmt.setInt(4, account.getType().getTypeId());
+			
+	
+			if (stmt.executeUpdate() != 0)
+				return true;
+			else
+				return false;
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		} finally {
+			closeResources();
+		}
+	}
+	
+	/*------------------------------------------------------------------------------------------------*/	
 
 	@Override
 	public Account updateAccount(int accountId, double balance, int status, int type) {
@@ -135,9 +165,7 @@ public class AccountDAOImpl implements AccountDAO {
 
 	}
 
-	/*------------------------------------------------------------------------------------------------*/
-	
-	
+	/*------------------------------------------------------------------------------------------------*/	
 
 	@Override
 	public Account withdrawAccount(int accountId, double balance) {
@@ -428,7 +456,10 @@ public class AccountDAOImpl implements AccountDAO {
 		}
 	}
 
-
+	
 	/*------------------------------------------------------------------------------------------------*/
+
+
+
 	
 }

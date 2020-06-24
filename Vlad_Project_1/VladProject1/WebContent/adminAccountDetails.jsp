@@ -16,16 +16,16 @@
 		<h1>
 			Bank API <small> Account Details - ${account.accountId }</small>
 		</h1>
-		
+
 		<hr>
-		
+
 		<form>
 			<input type="button" value="Logout"
 				onclick="window.location.href='Logout'" />
 		</form>
 
 		<hr>
-		
+
 		<div>
 			<form action="UpdateAccount" method="post">
 
@@ -38,33 +38,74 @@
 						<div>
 							<input type="text" id="balance" name="balance"
 								placeholder="Balance" required="required"
-								value="${account.balance }" />
+								value="${account.balance }" disabled/>
 						</div>
 					</div>
 
 					<div>
 						<label for="status">Status</label>
 						<div>
-							<input type="text" id="statusId" name="statusId" placeholder="StatusId"
-								required="required" value="${account.status.statusId }" />
+							<select id="statusId" name="statusId" required="required">
+								<option value=${account.status.statusId } selected>${account.status.status }</option>
+								<option value="0">Pending</option>
+								<option value="1">Open</option>
+								<option value="2">Closed</option>
+								<option value="3">Denied</option>
+							</select>
 						</div>
 					</div>
 
 					<div>
 						<label for="type">Type</label>
 						<div>
-							<input type="text" id="typeId" name="typeId" placeholder="TypeId"
-								required="required" value="${account.type.typeId }" />
+							<select id="typeId" name="typeId" required="required">
+								<option value=${account.type.typeId } selected>${account.type.type }</option>
+								<option value="0">Checking</option>
+								<option value="1">Savings</option>
+							</select>
 						</div>
 					</div>
 
 				</div>
 
-					<div>
-						<button type="submit" class="btn btn-info">Update Account</button>
-					</div>
+				<div>
+					<button type="submit" class="btn btn-info">Update Account</button>
+				</div>
 			</form>
 		</div>
+		
+		<hr>
+		<form action="WithdrawAccount" method="post">
+			<span> <input type="hidden" id="accountId" name="accountId"
+				required="required" value="${account.accountId }" />
+				
+				 <label
+				for="withdraw">Withdraw account</label> 
+				
+				<input type="text" id="withdraw"
+				name="withdraw" placeholder="insert sum" required="required"/>
+
+				<button type="submit" class="btn btn-info">Withdraw</button>
+			</span>
+		</form>
+		<hr>
+		
+		<hr>
+		<form action="DepositAccount" method="post">
+			<span> <input type="hidden" id="accountId" name="accountId"
+				required="required" value="${account.accountId }" />
+				
+				 <label
+				for="deposit">Deposit account</label> 
+				
+				<input type="text" id="deposit"
+				name="deposit" placeholder="insert sum" required="required"/>
+
+				<button type="submit" class="btn btn-info">Deposit</button>
+			</span>
+		</form>
+		<hr>
+		
 	</div>
 
 	<div>

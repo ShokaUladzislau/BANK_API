@@ -17,6 +17,9 @@ public interface AccountDAO {
 	public List<Account> getAccountsByStatus(int status);
 	public List<Account> getAccountsByUser(String firstName, String lastName);
 	public List<Account> transferBetweenAccounts(int accountId1, int accountId2, double balance);
+	
+	public boolean addAccount(Account account);
 
 	public void passTimeAccount(int months);
+	
 }

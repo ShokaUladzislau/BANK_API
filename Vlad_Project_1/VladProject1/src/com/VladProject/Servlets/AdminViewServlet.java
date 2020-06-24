@@ -9,8 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.VladProject.Models.Account;
 import com.VladProject.Models.User;
 import com.VladProject.Utilites.DAOUtilities;
+import com.VladProject.dao.AccountDAO;
 import com.VladProject.dao.UserDAO;
 
 @WebServlet("/AdminView")
@@ -23,7 +25,11 @@ public class AdminViewServlet extends HttpServlet {
 
 		UserDAO udao = DAOUtilities.getUserDAO();
 		List<User> userList = udao.getAllUsers();
+		
+		AccountDAO adao = DAOUtilities.getAccountDAO();
+		List<Account> accountList = adao.getAccounts();
 
+		request.getSession().setAttribute("accounts", accountList);
 		request.getSession().setAttribute("users", userList);
 
 		request.getRequestDispatcher("admin.jsp").forward(request, response);
@@ -34,7 +40,11 @@ public class AdminViewServlet extends HttpServlet {
 
 		UserDAO udao = DAOUtilities.getUserDAO();
 		List<User> userList = udao.getAllUsers();
+		
+		AccountDAO adao = DAOUtilities.getAccountDAO();
+		List<Account> accountList = adao.getAccounts();
 
+		request.getSession().setAttribute("accounts", accountList);
 		request.getSession().setAttribute("users", userList);
 
 		request.getRequestDispatcher("admin.jsp").forward(request, response);

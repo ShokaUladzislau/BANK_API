@@ -16,9 +16,9 @@
 		<h1>
 			Bank API <small> User Details - ${user.userId }</small>
 		</h1>
-		
+
 		<hr>
-		
+
 		<form>
 			<input type="button" value="Logout"
 				onclick="window.location.href='Logout'" />
@@ -76,16 +76,21 @@
 			</div>
 
 			<div>
-				<label for=roleId>RoleId</label>
+				<label for=roleId>Role</label>
 				<div>
-					<input type="text" id="roleId" name="roleId" placeholder="RoleId"
-						required="required" value="${role.roleId }" />
+					<select id="roleId" name="roleId" required="required">
+						<option value=${role.roleId } selected>${role.role }</option>
+						<option value="0">Standart</option>
+						<option value="1">Premium</option>
+						<option value="2">Employee</option>
+						<option value="3">Admin</option>
+					</select>
 				</div>
 			</div>
 
-				<div>
-					<button type="submit" class="btn btn-info">Update User</button>
-				</div>
+			<div>
+				<button type="submit" class="btn btn-info">Update User</button>
+			</div>
 		</form>
 
 		<form action="DeleteUser?userId=${user.userId}" method="get">
